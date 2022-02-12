@@ -18,7 +18,7 @@ update:
 
 init:
 ifdef BOARD
-	`pio project init --ide vim --board ${BOARD}`
+	pio project init --ide vim --board ${BOARD}
 else
 	@echo "Missing BOARD. run 'make boards' to find board ID"
 endif
