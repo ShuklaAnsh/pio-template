@@ -1,20 +1,23 @@
 all:
-	pio -f -c vim run
+	pio -c vim run
 
 upload:
-	pio -f -c vim run --target upload
+	pio -c vim run --target upload
 
 clean:
-	pio -f -c vim run --target clean
+	pio -c vim run --target clean
 
 program:
-	pio -f -c vim run --target program
+	pio -c vim run --target program
 
 uploadfs:
-	pio -f -c vim run --target uploadfs
+	pio -c vim run --target uploadfs
 
 update:
-	pio -f -c vim update
+	pio -c vim update
+
+upload_monitor:
+	pio -c vim run -t upload -t monitor
 
 init:
 ifdef BOARD
